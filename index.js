@@ -120,9 +120,7 @@ const screen = document.getElementById('screen');
 
 function displayNum(x){
     x = x.toString();
-    if(x == ''){
     screen.innerHTML = screen.innerHTML + ' ' + x;
-    }
 }
 
 // function to store value
