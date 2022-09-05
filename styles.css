@@ -1,31 +1,59 @@
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #8CC0DE;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.container{
-    width: 680px;
-    height: 650px;
-    border: 2px solid black;
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(33, 33, 33);
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #b56576;
-    margin-top: 20px;
-    border-radius: 35px;
+    align-items:center;
+
 }
+
+.outer {
+    display: flex;
+    background-color: white;
+    background-color: rgb(123, 121, 121);
+    /* background-color: black; */
+    height: 600px;
+    width: 100vw; 
+    justify-content: center;
+
+    padding: 2%;
+    background-color: #b56576;
+    background-color: rgb(33, 33, 33);
+}
+
+.container {
+    display: grid;
+    background-color: #b56576;
+    background-color: black;
+    background-color: rgb(33, 33, 33);
+    
+
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    padding: 20px;
+    /* border: 2px solid black; */
+    border-radius: 35px;
+
+    width: 100%;
+    max-width: 600px;
+    max-height: 600px;
+
+}
+
+
 
 .screen{
-    height: 100px;
-    width: 550px;
+
     margin-bottom: 15px;
     background-color: #81b29a;
     border-radius: 20px;
-    font-family: 'Staatliches', cursive;
-    font-size: 60px;
+    font-size: 2rem;
     border-style: none;
     display: flex;
     padding-left: 30px;
@@ -35,14 +63,15 @@ body{
 }
 
 .button, #equals{
-    width:100px;
-    height: 100px;
     margin-top: 16px;
     margin-right: 8px;
     margin-left: 8px;
-    font-family: 'Staatliches', cursive;
-    font-size: 40px;
+    font-size: 1.2rem;
     border-style: none;
+    padding: 5px;
+    max-height: 100px;
+    max-width: 100px;
+    border-radius: 10px;
 }
 
 .button:active, #equals:active{
@@ -68,12 +97,15 @@ body{
 }
 
 #equals{
-    background-color: #1B2430;
+    background-color: #1d2530;
     color: white;
+
+    background-color: #f6bd60;
+    color: black;
 }
 
 #equals, #clear{
-    width: 220px;
+    background-color: #f6bd60;
 }
 
 #equals:hover{
@@ -89,4 +121,18 @@ body{
     background-color: #4b5181;
 }
 
+
+.screen {
+    grid-column: 1 / 6;
+}
+
+#clear {
+    grid-column: 4 / 6;
+    max-width: 250px;
+}
+
+#equals {
+    grid-column: 3 / 5;
+    max-width: 250px;
+}
 
